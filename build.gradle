@@ -41,3 +41,25 @@ jacocoTestCoverageVerification {
      }
 
 }
+
+apply plugin: "checkstyle"
+
+
+
+checkstyle {
+
+    configFile = file("${rootDir}/config/checkstyle/checkstyle.xml") 
+
+}
+
+checkstyleMain {
+
+    source ='src/main/java'
+
+}
+
+checkstyleTest {
+
+    source ='src/test/java'
+
+}
